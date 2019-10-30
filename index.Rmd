@@ -1,6 +1,11 @@
 ---
 title: "Home"
-author: "Martha Mulugeta"
-date: "10/29/2019"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
+![](images/martha.jpeg) 
+
+**_Welcome!_** <br />
+I'm Martha, a second year Master of Public Health candidate at Columbia University Mailman School of Public Health. I am in the Department of Epidemiology, pursuing a certificate in Chronic Disease Epidemiology. Originally from Minnesota, I moved to New York to attend graduate school. Prior to this, I graduated from the University of St. Thomas with a Bachelor of Science degree in Neuroscience. To learn more, check out my resume [here](resume.html). 
