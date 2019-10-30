@@ -1,0 +1,57 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r, import}
+data("rest_inspec")
+```
+
+
+```{r}
+rest_grade = 
+  rest_inspec %>% 
+  select(
+    boro, zipcode, grade, score) %>%
+  filter(grade %in% c("A", "B", "C"), !is.na(score)) 
+```
+
+```{r}
+rest_grade %>% 
+  plot_ly(y = ~score, color = ~boro, type = "box",
+          colors = "Set2")
+```
+
+```{r}
+rest_inspec %>%
+  count(boro) %>% 
+  mutate(boro = fct_reorder(boro, n)) %>% 
+  filter(boro %in% c("STATEN ISLAND", "BRONX", "QUEENS", "BROOKLYN", "MANHATTAN")) %>% 
+  plot_ly(x = ~boro, y = ~n, type = "bar")
+```
+
+```{r}
+rest_grade %>%
+  filter(boro == "MANHATTAN") %>% 
+  count(grade) %>%
+  plot_ly(x = ~grade, y = ~n, type = "bar")
+```
+
+```{r}
+rest_inspec %>%
+  select(boro, grade, cuisine_description) %>% 
+  filter(boro == "MANHATTAN", grade == "C") %>% 
+  count(cuisine_description) %>% 
+  plot_ly(x = ~n, y = ~cuisine_description, type = "scatter")
+```
