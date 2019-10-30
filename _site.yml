@@ -5,8 +5,12 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html
-    - text: "Dashboard"
-      href: dashboard.html
+     - text: Examples
+      menu:
+      - text: "Plotly"
+        href: plotly.html
+      - text: "Dashboard"
+        href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<mm5351@cumc.columbia.edu.com>
     - icon: fa-github fa-lg
