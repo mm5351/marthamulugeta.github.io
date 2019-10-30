@@ -1,0 +1,18 @@
+name: "My Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<mm5351@cumc.columbia.edu.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/<mm5351>/
+output:
+  html_document:
+    theme: paper
+
+
