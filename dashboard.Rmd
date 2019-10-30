@@ -1,0 +1,56 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest_inspec %>% 
+  select(boro, score) %>%
+  filter(!is.na(score), boro != "Missing") %>% 
+  plot_ly(y = ~score, color = ~boro, type = "box",
+          colors = "Set2")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec %>% 
+  select(grade, boro) %>% 
+  count(grade, boro) %>% 
+  filter(grade %in% c("A", "B", "C"), boro != "Missing") %>% 
+  plot_ly(x = ~grade, y = ~n, color = ~boro, type = "bar", colors = "Set2")
+```
+
+### Chart C
+
+```{r}
+rest_inspec %>% 
+  select(score, grade, boro) %>% 
+  filter(!is.na(score), grade %in% c("A", "B", "C"), boro != "Missing") %>% 
+  count(score, grade, boro) %>% 
+  plot_ly(x = ~score, y = ~n, color = ~boro, type = "scatter", colors = "Set2")
+```
