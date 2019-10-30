@@ -1,0 +1,67 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+**EDUCATION** <br />
+**Columbia University, Mailman School of Public Health**, New York, NY <br /> 
+**_Master of Public Health (MPH)_**, Epidemiology, expected May 2020 <br /> 
+• Certificate in Chronic Disease Epidemiology <br /> 
+
+**University of St. Thomas**, Saint Paul, MN <br /> 
+**_Bachelor of Science_**, Neuroscience, Renaissance Program (Business) Minor, May 2018 <br />
+•	Studied abroad via Semester at Sea in Germany, Italy, Greece, Spain, Morocco, Senegal, Trinidad, Brazil, Peru, Ecuador, and Costa Rica, Fall 2016 <br /> 
+
+**RESEARCH EXPERIENCE** <br />
+**University of St. Thomas**, Saint Paul, MN <br />
+**_Department of Psychology Student Researcher_**                         Nov. 2015-May 2018 <br />
+_I’m Worried About You: Reflections from Mothers of International Adoptees_ <br />
+•	Successfully applied for funding (Young Scholars Grant) for independently developed research to study identity formation of international, transracial adoptees. <br />
+•	Assessed child self-concept using the adapted What I’m Like: Self-Perception Profile for Children. <br />
+•	Transcribed interviews adapted from the Parent Development Interview and coded results. <br />
+•	Presented at the Midwest Psychological Association (MPA) Conference in Illinois. <br />
+
+_Adult, Transracial, and International Adoptee Apathetic Political Belief Development_ <br />
+•	Interviewed  participants using Dan McAdams’ The Life Story Interview to research transracial, international adult adoptees and political development. <br />
+•	Transcribed and coded qualitative results. <br />
+•	Presented at the Minnesota Undergraduate Psychology Conference in Northfield, MN. <br />
+
+_Race Perceptions of College Campus Climate_ <br />
+•	Collaborated with research team to develop and disseminate a questionnaire completed by 262 participants on race perceptions of campus climate in hopes of doing a comparative analysis among various universities in the future. <br />
+•	Analyzed corresponding data using SPSS statistical modeling. <br />
+•	Presented at the University of St. Thomas Research Inquiry and MPA. <br />
+
+**PROFESSIONAL EXPERIENCE** <br />
+**New York City Department of Health and Mental Hygiene**, New York, NY	  June 2019-Present <br />
+**_Division of Epidemiology, Bureau of Epidemiology Services, Assistant Commissioner’s Officer Health Research Training Program Graduate Intern_** <br />
+•	Maintaining a surveillance system that monitors the impact of federal policies on the health of New Yorkers through data collection, analysis, and reporting. <br />
+•	Completed the Second Quarter 2019 Federal Policy Report by updating data from various programs and implementing changes made by the programs to the context within the report.<br />
+•	Conducting analyses with new data from Planned Parenthood NYC and the NYC DOHMH Tuberculosis clinics using SAS. <br />
+•	Developing a timeline containing key policies and actions of the federal administration in the domains under surveillance. <br />
+•	Transformed data visualizations within the report to improve data comprehension. <br />
+
+**University of St. Thomas**, Saint Paul, MN <br /> 
+**_Senior Student Visit Experience Coordinator_**                       Sept. 2014-Aug. 2018 <br />
+•	Coordinated more than 25 visits per day for prospective students using Banner and Salesforce CRM systems, and by effectively and efficiently communicating with faculty, staff, and coaches. <br />
+•	Arranged interviews for students applying to the Dougherty Family College, while helping design the system for interviews in the college’s first year. <br />
+•	Co-led monthly team meetings for team building and problem-solving to improve productivity. <br />
+
+**_Biology Lab Assistant_**                                             Sept. 2015-June 2016 <br />
+•	Organized weekly General Biology and Biological Communications and Energetics labs by independently running labs prior, arranging tools, and creating solutions to ensure operation. <br />
+•	Graded quizzes and input grades for General Biology students. <br />
+•	Managed animal research rooms by changing mice and rat cages weekly, restocking inventory, and preparing animal rooms (including birds) for inspections. <br />
+•	Monitored and refilled liquid nitrogen tanks used for Biology Department research labs. <br />
+•	Ran eye-wash stations throughout the Biology Department weekly to guarantee effectiveness. <br />
+
+**SKILLS** <br />
+**_Software_** <br />
+•	Advanced proficiency in Microsoft Office (Word, Excel, and PowerPoint) <br />
+•	Basic proficiency in statistical and research software: SPSS, SAS, and R (Fall 2020) <br />
+•	Basic proficiency in Banner and Salesforce CRM systems <br />
+
+**_Certifications_** <br />
+•	CITI (Human Subjects Protection) <br />
+•	HIPAA (Patient Privacy) <br />
+
