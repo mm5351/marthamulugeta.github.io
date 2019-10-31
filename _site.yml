@@ -17,8 +17,6 @@ navbar:
       href: http://github.com/<mm5351>/
     - icon: fab fa-linkedin
       href: https://www.linkedin.com/in/martha-mulugeta-0b1893153/ 
-    - icon: fab fa-twitter
-      href: https://twitter.com/Martha_Mulugeta
 output:
   html_document:
     theme: paper
