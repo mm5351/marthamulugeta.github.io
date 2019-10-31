@@ -18,8 +18,11 @@ set.seed(1)
 data("rest_inspec")
 inspection_df = 
   rest_inspec %>% 
-  select(score, boro, grade, dba, violation_code) %>% 
-  filter(!is.na(score), boro != "Missing", grade %in% c("A", "B", "C")) %>% 
+  select(score, boro, grade, violation_code) %>% 
+  filter(!is.na(score), 
+         boro != "Missing", 
+         grade %in% c("A", "B", "C")) %>% 
+  mutate(violation = violation_code) %>% 
   sample_n(5000)
 ```
 
@@ -46,10 +49,10 @@ inspection_df %>%
 
 ```{r}
 inspection_df %>%
-  select(violation_code) %>% 
-  count(violation_code) %>% 
-  mutate(violation_code = fct_reorder(violation_code, n)) %>% 
-  plot_ly(x = ~violation_code, y = ~n, color = ~violation_code, type = "bar", colors = "Set2")
+  select(violation) %>% 
+  count(violation) %>% 
+  mutate(violation = fct_reorder(violation, n)) %>% 
+  plot_ly(x = ~violation, y = ~n, color = ~violation, type = "bar", colors = "Set2")
 ```
 
 
