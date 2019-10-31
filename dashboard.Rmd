@@ -6,6 +6,8 @@ output:
     vertical_layout: fill
 ---
 
+Data Source: NYC Open Data
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
@@ -34,7 +36,7 @@ inspection_df =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Distribution of Inspection Score Across NYC Boroughs
+### Distribution of Restaurant Inspection Scores Across NYC Boroughs
 
 ```{r, borough score}
 inspection_df %>% 
