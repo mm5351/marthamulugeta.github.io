@@ -1,7 +1,5 @@
 ---
-title: "Untitled"
-author: "Martha Mulugeta"
-date: "10/30/2019"
+title: "Plotly"
 output: html_document
 ---
 
