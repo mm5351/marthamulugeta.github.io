@@ -14,7 +14,7 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-```{r}
+```{r, import and clean}
 set.seed(1)
 data("rest_inspec")
 inspection_df = 
@@ -23,7 +23,11 @@ inspection_df =
   filter(!is.na(score), 
          boro != "Missing", 
          grade %in% c("A", "B", "C")) %>% 
-  mutate(violation = violation_code) %>% 
+  rename(Violation = violation_code,
+         Grade = grade,
+         Score = score,
+         Borough = boro) %>% 
+  mutate(Borough = str_to_title(Borough)) %>% 
   sample_n(5000)
 ```
 
@@ -32,10 +36,10 @@ Column {data-width=650}
 
 ### Distribution of Inspection Score Across NYC Boroughs
 
-```{r}
+```{r, borough score}
 inspection_df %>% 
-  select(boro, score) %>%
-  plot_ly(y = ~score, color = ~boro, type = "box",
+  select(Borough, Score) %>%
+  plot_ly(y = ~Score, color = ~Borough, type = "box",
           colors = "Set2")
 ```
 
@@ -44,20 +48,20 @@ Column {data-width=350}
 
 ### Letter Grades For Restaurant Inspection Across NYC Boroughs
 
-```{r}
+```{r, borough grade}
 inspection_df %>% 
-  select(grade, boro) %>% 
-  count(grade, boro) %>% 
-  plot_ly(x = ~grade, y = ~n, color = ~boro, type = "bar", colors = "Set2")
+  select(Grade, Borough) %>% 
+  count(Grade, Borough) %>% 
+  plot_ly(x = ~Grade, y = ~n, color = ~Borough, type = "bar", colors = "Set2")
 ```
 
 ### Total Number of Restaurants by Inspection Letter Grade and Score
 
-```{r}
+```{r, score and grade}
 inspection_df %>% 
-  select(score, grade) %>% 
-  count(score, grade) %>% 
-  plot_ly(x = ~n, y = ~score, color = ~grade, type = "scatter", colors = "Set2")
+  select(Score, Grade) %>% 
+  count(Score, Grade) %>% 
+  plot_ly(x = ~n, y = ~Score, color = ~Grade, type = "scatter", colors = "Set2")
 ```
 
 Column {data-width=650}
@@ -65,10 +69,10 @@ Column {data-width=650}
 
 ### Total Number of Violations by Violation Code
 
-```{r}
+```{r, violations}
 inspection_df %>%
-  select(violation) %>% 
-  count(violation) %>% 
-  mutate(violation = fct_reorder(violation, n)) %>% 
-  plot_ly(x = ~violation, y = ~n, color = ~violation, type = "bar", colors = "Set2")
+  select(Violation) %>% 
+  count(Violation) %>% 
+  mutate(Violation = fct_reorder(Violation, n)) %>% 
+  plot_ly(x = ~Violation, y = ~n, color = ~Violation, type = "bar", colors = "Set2")
 ```
