@@ -15,19 +15,23 @@ library(plotly)
 ```
 
 ```{r}
+set.seed(1)
 data("rest_inspec")
+inspection_df = 
+  rest_inspec %>% 
+  select(score, boro, grade, dba, violation_code) %>% 
+  filter(!is.na(score), boro != "Missing", grade %in% c("A", "B", "C")) %>% 
+  sample_n(5000)
 ```
-
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution of Inspection Score Across NYC Boroughs
 
 ```{r}
-rest_inspec %>% 
+inspection_df %>% 
   select(boro, score) %>%
-  filter(!is.na(score), boro != "Missing") %>% 
   plot_ly(y = ~score, color = ~boro, type = "box",
           colors = "Set2")
 ```
@@ -35,22 +39,33 @@ rest_inspec %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Letter Grades For Restaurant Inspection Across NYC Boroughs
 
 ```{r}
-rest_inspec %>% 
+inspection_df %>% 
   select(grade, boro) %>% 
   count(grade, boro) %>% 
-  filter(grade %in% c("A", "B", "C"), boro != "Missing") %>% 
   plot_ly(x = ~grade, y = ~n, color = ~boro, type = "bar", colors = "Set2")
 ```
 
-### Chart C
+### Total Number of Restaurants by Inspection Letter Grade and Score
 
 ```{r}
-rest_inspec %>% 
-  select(score, grade, boro) %>% 
-  filter(!is.na(score), grade %in% c("A", "B", "C"), boro != "Missing") %>% 
-  count(score, grade, boro) %>% 
-  plot_ly(x = ~score, y = ~n, color = ~boro, type = "scatter", colors = "Set2")
+inspection_df %>% 
+  select(score, grade) %>% 
+  count(score, grade) %>% 
+  plot_ly(x = ~n, y = ~score, color = ~grade, type = "scatter", colors = "Set2")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Total Violations by Violation Code
+
+```{r}
+inspection_df %>%
+  select(violation_code) %>% 
+  count(violation_code) %>% 
+  mutate(violation_code = fct_reorder(violation_code, n)) %>% 
+  plot_ly(x = ~violation_code, y = ~n, color = ~violation_code, type = "bar", colors = "Set2")
 ```
