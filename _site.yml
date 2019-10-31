@@ -12,7 +12,7 @@ navbar:
       - text: "Dashboard"
         href: dashboard.html
     - icon: fa-envelope fa-lg
-      href: mailto:<mm5351@cumc.columbia.edu.com>
+      href: mailto:<mm5351@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/<mm5351>/
     - icon: fab fa-linkedin
