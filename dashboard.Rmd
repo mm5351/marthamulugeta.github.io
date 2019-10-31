@@ -2,7 +2,7 @@
 title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
 ---
 
@@ -24,7 +24,7 @@ inspection_df =
   sample_n(5000)
 ```
 
-Column {data-width=650}
+Row {data-width=650}
 -----------------------------------------------------------------------
 
 ### Distribution of Inspection Score Across NYC Boroughs
@@ -36,7 +36,7 @@ inspection_df %>%
           colors = "Set2")
 ```
 
-Column {data-width=350}
+Row {data-width=350}
 -----------------------------------------------------------------------
 
 ### Letter Grades For Restaurant Inspection Across NYC Boroughs
@@ -57,7 +57,7 @@ inspection_df %>%
   plot_ly(x = ~n, y = ~score, color = ~grade, type = "scatter", colors = "Set2")
 ```
 
-Column {data-width=650}
+Row {data-width=650}
 -----------------------------------------------------------------------
 
 ### Total Violations by Violation Code
